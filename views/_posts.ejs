@@ -1,0 +1,39 @@
+<li id="post-<%=i._id%>">
+<div class="posts-comment">
+    <% if(locals.user && locals.user.id==i.User.id) { %>
+    <a class="delete-post-button" href="/posts/destroy/<%=i.id %>">✖</a>
+    <%}%>
+   <p>Content :<%=i.content  %> </p>
+   <p>User name :<%=i.User.name  %> </p>
+   <p><a class="toggle-like-button" data-likes="<%=i.Like.length %>" href="/likes/toggle/?id=<%=i._id%>&type=Post"><%=i.Like.length %>💛</a></p>
+
+   <% if(locals.user){%>
+        
+   <form action="/posts/comment" id="post-comment" method="post"  >
+       <textarea name="comment" cols="10" row="2" placeholder="enter"></textarea>
+       <input type="hidden" name="post" value="<%= i._id %>" >
+       <input type="submit" value="Comment">
+
+   </form>
+   <%}%>
+      
+   <% for(j of i.Comment) { %>
+     
+     <ul>
+        <p>   <%= j.content %>  </p>
+
+       <% if(locals.user){ %>
+        <p> <a class="toggle-like-button" data-likes="<%=j.Like.length%>"  href="/likes/toggle/?id=<%=j._id%>&type=Comment" >💛 <%=j.Like.length %></a></p>
+                  
+
+        <% }else { %>
+            💛 <%=j.Like.length %>
+            <%}%>
+        <p> commented by:  <%=j.User.name %></p>
+     </ul>
+
+
+    <%}%>
+</div>
+
+</li>

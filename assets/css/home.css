@@ -1,0 +1,170 @@
+body{
+    background-color: pink;
+
+}
+#Home-container{
+    display: flex;
+    
+}
+.user-profiles{
+    width : 4cm,
+    
+}
+#show_button{
+    width:2cm;
+    height:2cm;
+}
+/* section.chat__section body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #F8F8F8;
+    font-family: 'Roboto', sans-serif;
+} */
+section.chat__section {
+    width :25%;
+    border: solid 2px darkblue;
+    position:absolute;
+    bottom: 0cm;
+    border-bottom-right-radius: 1cm;
+    background-color: aquamarine;
+}
+/* .brand{
+    padding-right: 0.5cm;
+    padding-left: 0.5cm;
+    border:1%;
+    overflow: auto;
+} */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.brand {
+    padding: 20px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+.brand h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #444;
+    margin-left: 10px;
+}
+.message__area{
+    height: 450px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-top: 40px;
+}
+textarea {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    outline: none;
+    background: #FBFBFB;
+}
+
+.message {
+    padding: 20px; 
+    border-radius: 4px; 
+    margin-bottom: 40px;
+    max-width: 300px;
+    position: relative;
+}
+.incoming {
+    background: #8F8BE8;
+    color: #fff;  
+}
+.outgoing {
+    background: #e9eafd;
+    color: #787986;
+    margin-left: auto;
+}
+.message h4 {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.other-messages{
+    text-align: left;
+    list-style-type: none;
+     background-color: bisque;
+    /* display: inline-block;  */
+    width: 60%;
+    border-radius: 0.5cm;
+}
+.self-messages{
+    text-align: right;
+    
+    list-style-type: none;
+    background-color: greenyellow;
+    
+    border-radius: 0.5cm;
+    width: 100%;
+    
+}
+#chat-engine{
+    position: fixed;
+    bottom: 0cm;
+    width: 100%;
+    display: flex;
+}
+
+
+h1{
+    text-align: center;
+}
+#previous-posts-container{
+    width: 17cm;
+    padding-left: 0.2cm;
+    background-color: lightblue;
+    border-right: 1px solid red;
+}
+#feed-posts{
+    width: 10cm;
+    padding-left: 2cm;
+     border-right: 1px solid red;
+     
+}
+#friends-container{
+    font-size :0.5cm;
+    background-color: lightcoral;
+    padding-left: 0.2cm;
+    width: 10cm;
+    border-right:0.1cm solid lawngreen;
+}
+.but{
+    width: fit-content;
+    background-color: lightblue;
+    text-decoration-color: blue;
+    border: 2px solid darkblue;
+    
+}
+
+#form{
+    background-color: yellow;
+}
+.pop-up {
+    
+    background: lightgreen;
+    width: fit-content;
+    border: 1px solid darkgreen;
+    padding: 1pc;
+    background: padding salmon;
+    color: darkolivegreen;
+    background-clip: padding-box;
+    ;
+}
+
+.hidden{
+    display: none;
+}

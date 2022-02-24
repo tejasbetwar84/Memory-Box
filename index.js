@@ -4,7 +4,9 @@ const cookieParser = require('cookie-parser');
 
 const app=express();
 const port=8000;
+
 const db=require('./configs/mongoose');
+const morgan=require('morgan');
 const Env=require('./configs/enviroment');
 const User=require('./models/user');
 const session=require('express-session');
@@ -59,6 +61,9 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 
 app.use('/uploads',express.static(__dirname+'/uploads'));
+
+app.use(morgan(Env.morgon.mode,Env.morgon.options));
+
 
 app.use(session({
     name:"parser",

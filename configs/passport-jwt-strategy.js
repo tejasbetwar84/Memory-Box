@@ -11,6 +11,7 @@ let opts = {
 }
 
 
+
 passport.use(new jwtstrategy(opts,function(jwtpayload,done){
     User.findById(jwtpayload._id,function(err,user){
         if(err){

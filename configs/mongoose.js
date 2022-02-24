@@ -10,3 +10,4 @@ my_data.on('error',console.error.bind(console,'error connecting to DataBASE'));
 my_data.once('open',function(){
     console.log("Successfully connected to DataBase");
 })
+
